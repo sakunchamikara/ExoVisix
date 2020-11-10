@@ -212,7 +212,7 @@ public class SampleController {
 
 		
 		faceDetect.setIsRecFace(true);
-		// printOutput(faceDetect.getOutput());
+//		 printOutput(faceDetect.getOutput());
 
 		recogniseBtn.setText("Get Face Data");
 

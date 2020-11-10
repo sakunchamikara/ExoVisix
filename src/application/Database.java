@@ -15,20 +15,23 @@ class Database {
 
 	public final String Database_name = "ghosteye";
 	public final String Database_user = "root";
-	public final String Database_pass = "";
+	public final String Database_pass = "root";
 
 	public Connection con;
 
 	public boolean init() throws SQLException {
 		try {
-			Class.forName("com.mysql.jdbc.Driver");
+			Class.forName("com.mysql.cj.jdbc.Driver");
 
 			try {
 				this.con = DriverManager.getConnection("jdbc:mysql://localhost:3306/" + Database_name, Database_user,
 						Database_pass);
 			} catch (SQLException e) {
 
+
+				System.out.println(e);
 				System.out.println("Error: Database Connection Failed ! Please check the connection Setting");
+
 
 				return false;
 
